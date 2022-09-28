@@ -3,17 +3,18 @@ import { createContext, useState } from "react";
 const CartContext = createContext()
 
 const cartitems = [{
-    id: 3,
-    title: 'test',
+    id: 's3',
+    title: 'Pencil Large X',
     price: 40,
     category: 'School Supplies',
     description: 'sample desc',
     discount: 40
 },
 {
-    id: 2,
-    title: 'test',
+    id: 's2',
+    title: 'Sando For Kids',
     price: 40,
+    category: 'Men\'s Apparel ',
     description: 'sample desc',
     discount: 40
 }
