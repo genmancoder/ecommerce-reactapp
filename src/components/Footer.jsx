@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='container mx-auto text-[11px]'>
+    <footer className='container mx-auto text-[11px] pt-7'>
       <div className='flex justify-between container'>
           <div>
             <h1 className='font-bold'>Customer Service</h1>
@@ -82,7 +82,7 @@ const Footer = () => {
                 </ul>      
             </nav>
           </div>
-          <div>
+          <div className='lg:block sm:hidden md:hidden'>
             <h1 className='font-bold'>Shopay App Download</h1>
             <nav className='text-left'>
                 <ul className='flex flex-col'>
