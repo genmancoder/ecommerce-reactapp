@@ -16,7 +16,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className='lg:flex justify-between text-white text-[14px] mx-auto'>
+    <div className='lg:flex justify-between text-white text-[14px] mx-auto '>
         <nav className="bg-[#f53d2d] w-[100%] container mx-auto">
 			<div className="mx-auto px-4">
 				<div className="flex justify-between">
