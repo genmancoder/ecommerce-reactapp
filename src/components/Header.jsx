@@ -5,7 +5,7 @@ import Branding from './Branding'
 
 const Header = () => {
   return (
-    <header className='bg-[#f53d2d] w-[100%] sticky top-0'>
+    <header className='bg-[#f53d2d] w-[100%] sticky top-0 z-50'>
         <Navbar/>
         <Branding/>
         
