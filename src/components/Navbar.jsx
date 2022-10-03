@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { IoCartOutline } from 'react-icons/io5'
 
+import {
+	Link  
+  } from 'react-router-dom'
+
 const Navbar = () => {
 
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -30,9 +34,11 @@ const Navbar = () => {
 						</div>
 						
 						<div className="hidden md:flex items-center space-x-1">
-							<a href="" className="py-4 px-2 text-white border-b-4 border-white font-semibold ">Home</a>
-							<a href="" className="py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300">Services</a>
-							<a href="" className="py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300">About</a>
+							<Link className='py-4 px-2 text-white border-b-4 border-white font-semibold' to="/">Home</Link>
+							<Link className='py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300' to="/cart">Search</Link>
+							<Link className='py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300' to="/cart">Cart</Link>
+							<Link className='py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300' to="/about">About</Link>																					
+							
 							{/* <a href="" className="py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300">Contact Us</a> */}
 						</div>
 					</div>
