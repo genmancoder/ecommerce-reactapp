@@ -2,30 +2,20 @@ import { createContext, useState } from "react";
 
 const CartContext = createContext()
 
-const cartitems = [{
-    id: 's3',
-    title: 'Pencil Large X',
-    price: 40,
-    category: 'School Supplies',
-    description: 'sample desc',
-    discount: 40
-},
-{
-    id: 's2',
-    title: 'Sando For Kids',
-    price: 40,
-    category: 'Men\'s Apparel ',
-    description: 'sample desc',
-    discount: 40
-}
-]
+
+const db = localStorage.getItem('gcart')
+const storedCart = db ? JSON.parse(db) : [];
+
 
 export function CartProvider({children}){
 
-    const [cart, setCart] = useState(cartitems)
+    const [cart, setCart] = useState(storedCart)
 
-    const addToCart = (id,title,price,description,discount) => {
-        setCart((prev) => [...prev, {id,title,price,description,discount}])
+    const addToCart = (id,title,price,description,image,discount) => {
+        setCart((prev) => [...prev, {id,title,price,description,image,discount}])
+
+        const nstate = [...cart, {id,title,price,description,image,discount}]
+        localStorage.setItem('gcart', JSON.stringify(nstate))
     }
 
 

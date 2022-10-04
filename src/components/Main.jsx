@@ -4,6 +4,7 @@ import Categories from './Categories';
 
 import CartContext from '../CartContext'
 import Product from './Product';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
 
@@ -35,8 +36,14 @@ const Main = () => {
             <div className='mx-auto container'>
               <div className='p-8 flex flex-wrap justify-start'>
                   {
-                    data && data.map((item) => (                      
-                        <Product key={item.id} product={item}/>
+                    data && data.map((item) => (                                           
+                        <Link key={item.id}  to={{
+                            pathname: `/productview/${item.id}`, 
+                            state: {
+                              id: item.id,
+                              fromNotifications: true
+                          }
+                        }}><Product key={item.id + "p"} product={item}/></Link>
                     ))
 
                   }

@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
+import { useContext } from 'react'
 import { IoCartOutline } from 'react-icons/io5'
 
 import {
 	Link  
   } from 'react-router-dom'
+import CartContext from '../CartContext'
 
 const Navbar = () => {
-
+  const {cart} = useContext(CartContext)
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   function handleMenuClick(e) {    
@@ -54,7 +56,12 @@ const Navbar = () => {
 					<div className="hidden md:flex items-center space-x-3 ">
 						{/* <a href="" className="py-2 px-2 font-medium text-white rounded hover:bg-green-500 hover:text-white transition duration-300">Log In</a> */}
 						{/* <a href="" className="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Sign Up</a> */}
-                        <IoCartOutline className='cursor-pointer' size='42' color='white' />
+						<div className='flex'>							
+                        	<IoCartOutline className='cursor-pointer' size='42' color='white' />
+							<div className='-mx-3 bg-white h-5 p-0 text-orange-400 font-semibold rounded-lg w-7 text-center'>
+								<span className='p-2'>{cart.length}</span>
+							</div>
+						</div>
 					</div>
 					
 					<div className="md:hidden flex items-center">
