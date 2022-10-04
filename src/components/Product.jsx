@@ -36,7 +36,7 @@ const Product = (props) => {
                 </div>
                 <div className=''>                   
                         <div className='space-x-1'>
-                        <Rating initialValue={rating} size={18} readonly={true}/>
+                            <Rating initialValue={rating} size={18} readonly={true}/>
                         </div>
 
                 </div>
